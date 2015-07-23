@@ -4,7 +4,7 @@ var author = authorInput.value;
 var twitter = twitterInput.value;
 var facebook = FBInput.value;
 
-var proxyurl = "http://localhost/getURLTitle.php?url=" + url;
+var proxyurl = "http://jrbsu.github.io/getURLTitle.php?url=" + url;
   $.ajax({
     url: proxyurl,
     async: true,
