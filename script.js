@@ -4,15 +4,17 @@ var author = authorInput.value;
 var twitter = twitterInput.value;
 var facebook = FBInput.value;
 
-$.ajax({
-  type: "POST",
-  url: "./getURLTitle.php",
-  data: "{url: \"" + url + "\"}",
-  success: function(data) {
-     var title = data;
-     alert(data);
-  }   
-});
+var proxyurl = "http://localhost/get_external_content.php?url=" + url;
+  $.ajax({
+    url: proxyurl,
+    async: true,
+    success: function(response) {
+      alert(response);
+    },   
+    error: function(e) {
+      alert("error! " + e);
+    }
+  });
 
 result.innerHTML = "Hey all,<br/><br />We just published \""+title+"\" to the blog. URL:<br /><br />"+url+"<br /><br />Many thanks to "+author+" for this post.<br /><br />Below are some proposed social media messages. Please tweak as needed.<br /><br /><b>Twitter (@wikipedia/@wikimedia):</b><br />• "+twitter+" "+url+"<br /><br /><b>Facebook/Google+:</b><br />• "+facebook+" "+url+"<br/ ><br />thanks,<br />Joe";
 
