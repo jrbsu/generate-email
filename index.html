@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+    <head>
+    	<title>Social email generator</title>
+	    <script type="text/javascript" src="script.js"></script>
+<!--	<link rel="stylesheet" type="text/css" href="style.css"> -->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script src="jquery-ui-1.10.4/js/jquery-ui-1.10.4.min.js"></script>
+    </head>
+    <body>
+		<textarea id="urlInput">URL</textarea><br/>
+		<textarea id="authorInput">Author</textarea><br/>
+		<textarea id="twitterInput">Twitter</textarea><br/>
+		<textarea id="FBInput">Facebook</textarea><br/>
+		<button onclick="generateEmail()">Go!</button>
+		<button onclick="SelectText('result')">Select/Copy to clipboard</button>
+		<div id="result"></div>
+		<div id="answer"></div>
+	</body>
+</html>
