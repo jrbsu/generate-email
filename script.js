@@ -1,9 +1,11 @@
 function generateEmail(){
 var url = urlInput.value;
+var title = titleInput.value;
 var author = authorInput.value;
 var twitter = twitterInput.value;
 var facebook = FBInput.value;
 
+/* Not sure how to make this work... 
 var proxyurl = "http://jrbsu.github.io/getURLTitle.php?url=" + url;
   $.ajax({
     url: proxyurl,
@@ -15,6 +17,7 @@ var proxyurl = "http://jrbsu.github.io/getURLTitle.php?url=" + url;
       alert("error! " + e);
     }
   });
+*/
 
 result.innerHTML = "Hey all,<br/><br />We just published \""+title+"\" to the blog. URL:<br /><br />"+url+"<br /><br />Many thanks to "+author+" for this post.<br /><br />Below are some proposed social media messages. Please tweak as needed.<br /><br /><b>Twitter (@wikipedia/@wikimedia):</b><br />• "+twitter+" "+url+"<br /><br /><b>Facebook/Google+:</b><br />• "+facebook+" "+url+"<br/ ><br />thanks,<br />Joe";
 
