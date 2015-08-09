@@ -48,7 +48,6 @@ function SelectText(element) { //this code from https://stackoverflow.com/questi
 		sel.removeAllRanges();
 
 		if(successful) answer.innerHTML = 'Copied!';
-		else answer.innerHTML = 'Unable to copy; please use ctrl+c!';
 		} catch (err) {
 		answer.innerHTML = 'Unsupported browser; please use ctrl+c!';
 	}
